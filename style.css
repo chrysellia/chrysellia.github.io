@@ -245,7 +245,7 @@ header.sticky{
   font-size: var(--p-font);
   color: var(--second-color);
   line-height: 28px;
-  margin-bottom: 5px;
+  margin: 8px 0px 25px;
 }
 
 .heading{
@@ -270,6 +270,7 @@ header.sticky{
   font-size: var(--p-font);
   color: var(--second-color);
   line-height: 28px;
+  margin: 8px 0px 25px;
 }
 
 .portfolio-content{
@@ -282,11 +283,11 @@ header.sticky{
   cursor: pointer;
 }
 
-.col{
+.col {
   position: relative;
 }
 
-.col img{
+.col img {
   max-width: 100%;
   width: 550px;
   height: auto;
@@ -294,7 +295,7 @@ header.sticky{
   border-radius: 12px;
 }
 
-.layer{
+.layer {
   background: transparent;
   height: 100%;
   width: 100%;
@@ -303,47 +304,43 @@ header.sticky{
   left: 0;
   border-radius: 12px;
   transition: all .40s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.layer:hover{
+.layer:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, #191919);
 }
 
-.layer h3{
-  position: absolute;
-  width: 100%;
+.layer h3 {
   font-size: 25px;
   font-weight: 500;
   color: var(--bg-color);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   opacity: 0;
   transition: all .40s;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
 }
 
-.layer:hover h3{
-  bottom: 52%;
-  opacity:1;
-}
-
-.layer h5{
-  position: absolute;
-  width: 100%;
-  font-size: 17px;
-  font-weight: 500;
+.layer a {
+  margin-top: 10px;
+  display: inline-block;
   color: var(--bg-color);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: all .40s;
+  background: var(--main-color);
+  font-size: var(--p-font);
+  padding: 10px 40px;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 30px;
+  transition: ease .40s;
 }
 
-.layer:hover h5{
-  bottom: 48%;
-  opacity:1;
+.layer:hover h3 {
+  opacity: 1;
 }
+
 
 .service-content{
   display: grid;
